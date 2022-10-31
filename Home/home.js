@@ -13,4 +13,4 @@ if(currTime >= 5 && currTime < 12){
 
 //Set background image 
 const backgroundElem = document.querySelector('.home-container');
-backgroundElem.style.backgroundImage = `url(https://source.unsplash.com/?morning)`;
+// backgroundElem.style.backgroundImage = `url(https://source.unsplash.com/?morning)`;

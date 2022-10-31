@@ -1,9 +1,38 @@
 {
-  "articles": [],
+  "articles": [
+    {
+      "article": {
+        "url": "https://github.com/",
+        "title": "github",
+        "category": "tool",
+        "cover": "rgb(252, 248, 128)",
+        "date": "10/31/2022"
+      },
+      "id": 1
+    },
+    {
+      "article": {
+        "url": "https://unsplash.com/",
+        "title": "Unsplash",
+        "category": "picture",
+        "cover": "rgb(117, 221, 221)",
+        "date": "10/31/2022"
+      },
+      "id": 2
+    }
+  ],
   "categories": [
     {
       "category": "All",
       "id": 1
+    },
+    {
+      "category": "tool",
+      "id": 2
+    },
+    {
+      "category": "picture",
+      "id": 3
     }
   ]
 }

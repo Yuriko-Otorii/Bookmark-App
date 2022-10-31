@@ -161,7 +161,6 @@ selectElem.addEventListener("blur", e => {
 
 
 // https://rightcode.co.jp/blog/information-technology/json-server-rest-api-mock-server-syain
-
 //Open server
 //https://www.xlsoft.com/jp/blog/blog/2019/08/20/post-7139/
 
