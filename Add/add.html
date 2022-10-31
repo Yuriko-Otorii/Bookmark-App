@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../../css/main.css" />
+
+    <title>Add bookmark</title>
+  </head>
+  <body>
+    <main>
+      <div class="form-title">
+        <p>New Bookmark</p>
+      </div>
+      <section class="form">
+        <div class="form-container">
+          <form action="" class="add-form">
+            <table>
+              <tr>
+                <th><label for="url">Url</label></th>
+                <td><input type="text" name="url" id="url" required /></td>
+              </tr>
+
+              <tr>
+                <th><label for="title">Title</label></th>
+                <td><input type="text" name="title" id="title" maxlength="15" required /></td>
+              </tr>
+
+              <tr>
+                <th><label for="category">Category</label></th>
+                <td>
+                  <input type="text" name="category" id="category" maxlength="15" required />
+                </td>
+              </tr>
+
+              <tr>
+                <th><label class="color-title">Cover</label></th>
+                <td class="color-td">
+                  <div class="color-section">
+                    <div class="color-selecter">
+                      <select
+                        id="changeSelect"
+                        name="cover-color"
+                        onchange="changeColor()"
+                      >
+                        <option value="default-select">Default</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Purple">Purple</option>
+                        <option value="Red">Red</option>
+                        <option value="Pink">Pink</option>
+                        <option value="Green">Green</option>
+                        <option value="Gray">Gray</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="color-display"></div>
+                </td>
+              </tr>
+
+              <tr>
+                <!-- <th><p>Preview</p></th> -->
+                <!-- <td><div class="color-display"></div></td> -->
+              </tr>
+            </table>
+
+            <div class="btn-wrapper">
+              <button type="submit" class="add-btn">Add</button>
+              <!-- <button type="submit" class="clear-btn">Cancel</button> -->
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <nav>
+      <div class="nav-items">
+        <div class="nav-item-container nav-item-hover">
+          <a href="../Home/home.html" class="nav-item">
+            <i class="fa-solid fa-house"></i>
+            <p>Home</p>
+          </a>
+        </div>
+        <div class="nav-item-container">
+          <div class="nav-item" >
+            <i class="fa-solid fa-plus"></i>
+            <p>Add</p>
+          </div>
+        </div>
+        <div class="nav-item-container nav-item-hover">
+          <a href="../List/list.html" class="nav-item">
+            <i class="fa-solid fa-list"></i>
+            <p>List</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- <script src="./add.js"></script> -->
+    <script src="./add2.js"></script>
+  </body>
+</html>

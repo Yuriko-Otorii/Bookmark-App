@@ -1,0 +1,206 @@
+@use "./config/base" as *;
+@use "./config/mixins" as *;
+@use "./config/variables" as *;
+
+
+template{
+    display: none;
+}
+
+select{
+    font-family: $main-font;
+}
+
+main{
+    padding-bottom: 3rem;
+    .list-title{
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 1.5rem 1.5rem 0;
+        .sort-num-container{
+            @include flexCenter();
+            align-items: flex-end;
+            .category-sort{
+                margin-top: .5rem;
+                #categorySelect{
+                    padding: .3rem;
+                }
+            }
+        }
+    }
+    .card-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        justify-items: center;
+        padding: 1rem 3rem;
+        .card{
+            width: 8rem;
+            height: 8rem;
+            border: 1px solid #848484;
+            border-radius: 20px;
+            padding: 1rem;
+            @include flexColumnCenter();
+            &:hover{
+                scale: 1.05;
+                border: 2px solid #696969;
+                transition: .3s;
+            }
+            p{
+                width: 101%;
+                padding: .3rem;
+                text-align: center;
+                overflow: hidden;
+            }
+        }
+    }
+    .modal-window-wrapper{
+        visibility: collapse;
+        opacity: 0;
+        transition-duration: .3s;
+        .article-modal{
+            @include flexColumnCenter();
+            background-color: rgba(0, 0, 0, 0.523);
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            .modal-container{
+                width: 20rem;
+                height: 20rem;
+                background-color: white;
+                border: 1px solid #848484;
+                border-radius: 10px;
+                position: relative;
+                .fa-xmark{
+                    position: absolute;
+                    top: 7%;
+                    right: 5%;
+                }
+                .modal-header{
+                    background: linear-gradient(180deg, #ffb8b8 50%);
+                    width: 100.5%;
+                    height: 50%;
+                    background-color: #ffb8b8;
+                    border-radius: 10px 10px 0 0;
+                    @include flexColumnCenter();
+                    input{
+                        display: none;
+                        transition-duration: .3s;
+                        margin-bottom: .6rem;
+                        padding: .5rem;
+                    }
+                    .modal-title{
+                        width: 90%;
+                        margin-bottom: 1rem;
+                        text-align: center;
+                        overflow: hidden;
+                    }
+                    p{
+                        font-size: .8rem;
+                        margin: .2rem;
+                    }
+                    
+                }
+                
+                .btns{
+                    padding: .7rem;
+                    @include flexColumnCenter();
+                    .go-link, .edit, .delete{
+                        width: 8rem;
+                        font-size: 1rem;
+                        margin: .3rem;
+                        position: relative;
+                        overflow: hidden;
+                        text-decoration: none;
+                        display: inline-block;
+                        border: 1px solid #848484;
+                        border-radius: 30px;
+                        padding: .5rem;
+                        text-align: center;
+                        outline: none;  
+                        background-color: transparent;
+                        font-family: $main-font;
+                        transition: ease .2s;
+                        span{
+                            position: relative;
+                            z-index: 10;
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: -130%;
+                            background:#333;
+                            width: 120%;
+                            height: 120%;
+                            transform: skewX(-30deg);
+                            
+                        }
+                        &:hover{
+                            &::before{
+                                animation: btnHoveranimation .5s forwards;
+                            }
+                            span{
+                                color: rgb(255, 255, 255);
+                            }
+                        }
+                    }
+                    .edit-display{
+                        display: none;
+                        transition-duration: .3s;
+                        .edit-color-section{
+                            @include flexColumnCenter();
+                        }
+                        
+                        .comfirm-btn{
+                            width: 8rem;
+                            margin-top: 2rem;
+                            font-size: .9rem;
+                            overflow: hidden;
+                            border: 1px solid #848484;
+                            border-radius: 30px;
+                            padding: .5rem;
+                            text-align: center;
+                            outline: none;  
+                            background-color: white;
+                            font-family: $main-font; 
+                            
+                        }
+
+
+                    }
+                }
+        
+            }
+        }
+
+    }
+}
+
+@keyframes btnHoveranimation {
+	100% {
+		left: -15%;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+    main{
+        .card-container{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main{
+        @include flexColumnCenter();
+        .card-container{
+            width: 50%;
+            padding: 2rem 3rem;
+        }
+    }
+}

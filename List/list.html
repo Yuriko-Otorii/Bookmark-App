@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../../css/main.css" />
+    <title>Bookmark list</title>
+  </head>
+  <body>
+    <template class="temp-card">
+      <div class="card">
+        <p class="card-title"></p>
+        <div class="card-category"></div>
+        <a href=""></a>
+      </div>
+    </template>
+    <template class="temp-option">
+      <option value="" class="option-elem"></option>
+    </template>
+
+    <main>
+      <div class="list-title">
+        <h1>Bookmark list</h1>
+        <div class="sort-num-container">
+          <p class="category-sort">
+            <i class="fa-duotone fa-filter"></i>
+            <select
+              id="categorySelect"
+              name="category-sort"
+              onchange="filterCategory()"
+            >
+              <!-- option Tags -->
+            </select>
+          </p>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <!-- Article list items -->
+      </div>
+
+      <!-- Modal window -->
+      <div class="modal-window-wrapper">
+        <div class="article-modal">
+          <div class="modal-container">
+            <i class="fa-solid fa-xmark fa-lg"></i>
+            <div class="modal-header">
+              <div class="modal-category-info"></div>
+              <h2 class="modal-title"></h2>
+              <input
+                type="text"
+                class="modal-title-input"
+                maxlength="15"
+                autofocus
+              />
+              <p class="modal-category">#<span></span></p>
+              <input type="text" class="modal-category-input" maxlength="15" />
+              <p>Added: <span class="added-date"></span></p>
+            </div>
+            <div class="btns">
+              <a href="" class="go-link" target="_blank"
+                ><span>Visit link</span></a
+              >
+              <button class="edit"><span>Edit</span></button>
+              <button class="delete"><span>Delete</span></button>
+              <div class="edit-display">
+                <div class="edit-color-section">
+                  <p class="edit-cover-title">Cover</p>
+                  <div class="edit-color-selecter">
+                    <select
+                      id="editChangeSelect"
+                      name="edit-cover-color"
+                      onchange="editChangeColor()"
+                    >
+                      <option value="default-select">Default</option>
+                      <option value="Orange">Orange</option>
+                      <option value="Yellow">Yellow</option>
+                      <option value="Blue">Blue</option>
+                      <option value="Purple">Purple</option>
+                      <option value="Red">Red</option>
+                      <option value="Pink">Pink</option>
+                      <option value="Green">Green</option>
+                      <option value="Gray">Gray</option>
+                    </select>
+                  </div>
+                </div>
+                <button class="comfirm-btn"><span>Comfirm</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <nav>
+      <div class="nav-items">
+        <div class="nav-item-container">
+          <a href="../Home/home.html" class="nav-item">
+            <i class="fa-solid fa-house"></i>
+            <p>Home</p>
+          </a>
+        </div>
+        <div class="nav-item-container">
+          <a href="../Add/add.html" class="nav-item">
+            <i class="fa-solid fa-plus"></i>
+            <p>Add</p>
+          </a>
+        </div>
+        <div class="nav-item-container">
+          <a href="./list.html" class="nav-item">
+            <i class="fa-solid fa-list"></i>
+            <p>List</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- <script src="list.js"></script> -->
+    <script src="list2.js"></script>
+    <!-- <script src="list3.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,74 @@
+@use "./config/base" as *;
+@use "./config/mixins" as *;
+@use "./config/variables" as *;
+
+select, input{
+    font-family: $main-font;
+}
+
+.form-title{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1.5rem 1.5rem 1rem;
+}
+
+.form{
+    .form-container{
+        width: 100vw;
+        height: 70vh;
+        padding: 1rem;
+        .add-form{
+            @include flexColumnCenter();
+            width: 80%;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            th{
+                text-align: left;
+                width: 40%;
+                padding: 8px 0;
+                vertical-align: top;
+                td{
+                    width: 60%;
+                    #title{
+                        padding: .4rem;
+                    }
+                }
+            }
+
+            .color-display{
+                width: 5rem;
+                height: 5rem;
+                border: 1px solid #848484;
+                border-radius: 20px;
+                margin-left: 1rem;
+            }         
+            
+            .btn-wrapper{
+                display: flex;
+                margin-top: 2rem;
+                .add-btn{
+                    text-align: center;
+                    font-family: $main-font;
+                    font-weight: bold;
+                    font-size: 1.1rem;
+                    width: 7rem;
+                    margin: .5rem 1rem;
+                    padding: .4rem;
+                    border: none;
+                    border-radius: 30px;
+                    border: 1.5px solid #848484;
+                    background-color: transparent;
+                    &:hover{
+                        background-color: #B8E1FF;
+                        transition: .5s;
+                    }
+                }
+            }
+        }  
+    }
+}
+
+.color-td{
+    display: flex;
+}

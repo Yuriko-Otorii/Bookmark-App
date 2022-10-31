@@ -1,0 +1,4 @@
+{
+    "/http://localhost:3000/articles": "articles",
+    "/http://localhost:3000/categories": "categories"
+ }

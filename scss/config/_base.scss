@@ -1,0 +1,49 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: $main-font;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+i{
+    font-family: "Font Awesome 5 Free";
+    margin-bottom: .2rem;
+}
+.nav-items{
+    @include navSetting();
+    .nav-item-container{
+        @include flexColumnCenter();
+        .nav-item{
+            @include flexColumnCenter();
+        }
+    }
+}
+.nav-item-hover{
+    &:hover{
+        color: #B8E1FF;
+        transition: .2s;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav-items{
+        @include navSetting();
+        justify-content: center;
+        .nav-item-container{
+            @include flexColumnCenter();
+            margin: 0 3rem;
+            .nav-item{
+                @include flexColumnCenter();
+            }
+        }
+    }
+    
+}
